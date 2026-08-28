@@ -1,107 +1,107 @@
-# Allowing Port 443
+# Tillate port 443
 
-Our plugins licensing system requires active communication over Port 443 (HTTPS) to authenticate your license with our web servers. If your system firewall, cloud security group, or host blocks outbound connections on Port 443, the plugin will fail to load.
+Lisensieringssystemet for våre utvidelser krever aktiv kommunikasjon via port 443 (HTTPS) for å autentisere lisensen din mot våre webservere. Hvis systemets brannmur, skysikkerhetsgruppe eller vert blokkerer utgående tilkoblinger på port 443, vil ikke plugin-modulen kunne lastes inn.
 
-This guide provides step-by-step instructions to ensure Port 443 is unblocked on your host server.
+Denne veiledningen gir trinnvise instruksjoner for å sikre at port 443 er åpnet på vertsserveren din.
 
 ### Windows Server / Windows OS
 
-On Windows, Port 443 outbound traffic is usually open by default, but local firewall policies or anti-virus software can sometimes block it.
+I Windows er utgående trafikk på port 443 vanligvis åpen som standard, men lokale brannmurregler eller antivirusprogramvare kan noen ganger blokkere den.
 
-#### Method 1: Windows Defender Firewall (GUI)
+#### Metode 1: Windows Defender-brannmur (GUI)
 
-1. Press `Win + R`, type `wf.msc`, and press Enter to open Windows Defender Firewall with Advanced Security.
-2. Click on Outbound Rules in the left panel.
-3. In the right panel, click New Rule...
-4. Select Port and click Next.
-5. Choose TCP, select Specific remote ports, and type `443`. Click Next.
-6. Select Allow the connection and click Next.
-7. Keep all profiles checked (Domain, Private, Public) and click Next.
-8. Name the rule (e.g., `BedwarsRestrictions - Port 443 Outbound`) and click Finish.
+1. Trykk på `Win + R`, skriv inn `wf.msc` og trykk på Enter for å åpne Windows Defender-brannmur med avansert sikkerhet.
+2. Klikk på Utgående regler i panelet til venstre.
+3. Klikk på Ny regel... i panelet til høyre.
+4. Velg port og klikk på Neste.
+5. Velg TCP, velg spesifikke eksterne porter, og skriv inn `443`. Klikk på Neste.
+6. Velg «Tillat tilkoblingen» og klikk på «Neste».
+7. La alle profiler være valgt (Domene, Privat, Offentlig) og klikk på Neste.
+8. Gi regelen et navn (f.eks. `Plugin - Port 443 Outbound`) og klikk på Fullfør.
 
-#### Method 2: PowerShell (Administrator)
+#### Metode 2: PowerShell (administrator)
 
-Open PowerShell as Administrator and run the following command to automatically create the outbound rule:
+Åpne PowerShell som administrator og kjør følgende kommando for å opprette utgående regel automatisk:
 
 ```
-New-NetFirewallRule -DisplayName "Allow Outbound HTTPS 443" -Direction Outbound -Action Allow -Protocol TCP -RemotePort 443
+New-NetFirewallRule -DisplayName "Tillat utgående HTTPS 443" -Retning utgående -Handling Tillat -Protokoll TCP -Eksternport 443
 ```
 
 ### Linux (Ubuntu, Debian, CentOS, RHEL)
 
-Most Linux dedicated servers or VPS instances utilize local firewalls such as `UFW` or `firewalld`.
+De fleste dedikerte Linux-servere eller VPS-instanser benytter lokale brannmurer som `UFW` eller `firewalld`.
 
 #### 1. Ubuntu / Debian (`ufw`)
 
-Check your current UFW status and allow outbound/inbound HTTPS traffic:
+Sjekk gjeldende UFW-status og tillat utgående/innkommende HTTPS-trafikk:
 
 ```
-# Check UFW status
+# Sjekk UFW-status
 sudo ufw status
 
-# Allow HTTPS (Port 443) traffic
+# Tillat HTTPS-trafikk (port 443)
 sudo ufw allow 443/tcp
 sudo ufw allow out 443/tcp
 
-# Reload firewall rules
+# Last inn brannmurregler på nytt
 sudo ufw reload
 ```
 
 #### 2. CentOS / RHEL / AlmaLinux (`firewalld`)
 
-If your system uses `firewalld`:
+Hvis systemet ditt bruker `firewalld`:
 
 ```
-# Allow HTTPS service permanently
+# Tillat HTTPS-tjeneste permanent
 sudo firewall-cmd --permanent --add-service=https
 
-# Allow Port 443 TCP explicitly
+# Tillat port 443 TCP eksplisitt
 sudo firewall-cmd --permanent --add-port=443/tcp
 
-# Reload firewall settings
+# Last inn brannmurinnstillinger på nytt
 sudo firewall-cmd --reload
 ```
 
-#### 3. Native `iptables`
+#### 3. Innebygd `iptables`
 
-If you manage raw `iptables` rules directly:
+Hvis du administrerer rå `iptables`-regler direkte:
 
 ```
-# Allow outbound TCP traffic on port 443
+# Tillat utgående TCP-trafikk på port 443
 sudo iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT
 
-# Save rules (varies by OS distribution)
+# Lagre regler (varierer avhengig av OS-distribusjon)
 sudo service iptables save
 ```
 
 ### macOS Server / macOS
 
-If you are running a local test server on macOS, traffic can be allowed via System Settings or the Packet Filter (`pf`) tool.
+Hvis du kjører en lokal testserver på macOS, kan trafikk tillates via Systeminnstillinger eller verktøyet Packet Filter (`pf`).
 
-#### Method 1: System Settings (GUI)
+#### Metode 1: Systeminnstillinger (GUI)
 
-1. Open System Settings > Network > Firewall.
-2. Click Options...
-3. Ensure Block all incoming connections is OFF.
-4. Ensure your Java binary (or Minecraft server terminal) is set to Allow incoming connections.
+1. Åpne Systeminnstillinger > Nettverk > Brannmur.
+2. Klikk på Alternativer...
+3. Sørg for at «Blokker alle innkommende tilkoblinger» er slått av.
+4. Sørg for at Java-kjørefilen (eller terminalen for Minecraft-serveren) er innstilt til å tillate innkommende tilkoblinger.
 
-#### Method 2: Terminal (`pfctl`)
+#### Metode 2: Terminal (`pfctl`)
 
-To allow traffic through the built-in macOS packet filter:
+For å tillate trafikk gjennom det innebygde pakkefilteret i macOS:
 
-1. Open Terminal.
-2. Check if `pf` is running:
+1. Åpne Terminal.
+2. Sjekk om `pf` kjører:
 
     ```
     sudo pfctl -s info
     ```
-3. To add a temporary pass rule for port 443:
+3. For å legge til en midlertidig tillatelsesregel for port 443:
 
     ```
-    echo "pass out proto tcp to any port 443" | sudo pfctl -a custom -f -
+    echo "send proto tcp til hvilken som helst port 443" | sudo pfctl -a custom -f -
     ```
 
-### Cloud Hosting / VPS Providers
+### Leverandører av skyhosting / VPS
 
 If you host your server on cloud providers (such as AWS, DigitalOcean, Linode, or Google Cloud), operating system firewalls are often supplemented by External Cloud Firewalls / Security Groups although normally its enabled by default or asks on creation of instance.
 
@@ -152,7 +152,7 @@ If you host your server on cloud providers (such as AWS, DigitalOcean, Linode, o
 
 #### **Game Panel Hosts (Pterodactyl / Apex / Bisect)**
 
-Most shared Minecraft hosts leave outbound Port 443 open by default. If you still encounter connection errors, contact your hosting provider's support team to verify that outbound HTTPS requests are not restricted by network proxies or panel firewalls.
+De fleste leverandører av delt Minecraft-hosting lar utgående port 443 være åpen som standard. Hvis du fortsatt opplever tilkoblingsfeil, bør du kontakte kundestøtten hos leverandøren av webhotell for å bekrefte at utgående HTTPS-forespørsler ikke blokkeres av nettverksproxyer eller brannmurer i kontrollpanelet.
 
 ### How to Test Port 443 Connectivity
 
