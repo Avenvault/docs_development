@@ -2,23 +2,23 @@
 
 ## 📖 Official Server & Bot Documentation
 
-Velkommen til den sentrale dokumentasjonsportalen! Her finner du offisielle veiledninger, instruksjoner for oppsett, referanser for konfigurasjon og feilsøking av nettverk for alle programvareprodukter.
+Welcome to the central documentation portal! Here you will find official guides, setup instructions, configuration references, and network troubleshooting for all software products.
 
 {% hint style="info" %}
-Du kan endre språket øverst til høyre!
+You can change the language in the top right!
 {% endhint %}
 
 ***
 
 ### 🎮 Minecraft Plugins
 
-[her](minecraft-plugins-table.md)
+[here](minecraft-plugins-table.md)
 
 ***
 
-### 🤖 Discord-boter
+### 🤖 Discord Bots
 
-[her](discord-bots-table.md)
+[here](discord-bots-table.md)
 
 ***
 
@@ -26,13 +26,13 @@ Du kan endre språket øverst til høyre!
 
 Self-service guides to assist server administrators with connection, SSL, firewall, and host issues.
 
-#### 🔌 Guider for Minecraft-servere
+#### 🔌 Minecraft Server Guides
 
-[her](network-and-firewall-guides/minecraft-server-guides/)
+[here](network-and-firewall-guides/minecraft-server-guides/)
 
-#### 🤖 Generelle veiledninger for Discord-boter
+#### 🤖 General Discord Bot Guides
 
-[her](network-and-firewall-guides/discord-bot-guides/)
+[here](network-and-firewall-guides/discord-bot-guides/)
 
 ***
 
