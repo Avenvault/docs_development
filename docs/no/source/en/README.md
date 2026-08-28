@@ -12,13 +12,13 @@ Du kan endre språket øverst til høyre!
 
 ### 🎮 Minecraft Plugins
 
-[her](minecraft-plugins-table.md)
+[her](minecraft-plugins%28table%29.md)
 
 ***
 
 ### 🤖 Discord-boter
 
-[her](discord-bots-table.md)
+[her](discord-bots%28table%29.md)
 
 ***
 
@@ -28,7 +28,7 @@ Self-service guides to assist server administrators with connection, SSL, firewa
 
 #### 🔌 Guider for Minecraft-servere
 
-[her](<network-and-firewall-guides/minecraft-server-guides/>)
+[her](network-and-firewall-guides/minecraft-server-guides/)
 
 #### 🤖 Generelle veiledninger for Discord-boter
 
