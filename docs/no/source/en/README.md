@@ -28,7 +28,7 @@ Self-service guides to assist server administrators with connection, SSL, firewa
 
 #### 🔌 Guider for Minecraft-servere
 
-[her](network-and-firewall-guides/minecraft-server-guides/)
+[her](<network-and-firewall-guides/minecraft-server-guides/>)
 
 #### 🤖 Generelle veiledninger for Discord-boter
 
