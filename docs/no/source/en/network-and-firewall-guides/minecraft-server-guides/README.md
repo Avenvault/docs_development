@@ -2,7 +2,7 @@
 
 Self-service guides to assist server administrators with connection, SSL, firewall, and host issues.
 
-#### 🔌 Minecraft Server Guides
+#### 🔌 Guider for Minecraft-servere
 
 - 🧱 [Unblocking Port 443 (Windows, Linux, macOS)](../allowing-port-443.md)
 - 🔑 [Java SSL/TLS Certificates & TrustStore Guide](java-ssl-tls-and-certificate-trust-store-guide.md)
