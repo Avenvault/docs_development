@@ -1,36 +1,36 @@
 # Table of contents
 
-- [Docs](README.md)
-- [Discord bots table](discord-bots-table.md)
-- [Minecraft plugins table](minecraft-plugins-table.md)
+* [Dokumenter](README.md)
+* [Tabell over Discord-boter](discord-bots-table.md)
+* [Tabell over Minecraft-tillegg](minecraft-plugins-table.md)
 
-## Minecraft plugins
+## Minecraft-plugins
 
-- [Bedwars Restrictions](minecraft-plugins/bedwars-restrictions/README.md)
-  - [Features](minecraft-plugins/bedwars-restrictions/features.md)
-  - [Installation Guide](minecraft-plugins/bedwars-restrictions/installation-guide.md)
-  - [Configuration (config.yml)](minecraft-plugins/bedwars-restrictions/configuration-config.yml.md)
-  - [Commands & Permissions](minecraft-plugins/bedwars-restrictions/commands-and-permissions.md)
-  - [Troubleshooting & FAQ](minecraft-plugins/bedwars-restrictions/troubleshooting-and-faq.md)
+* [Bedwars Restrictions](minecraft-plugins/bedwars-restrictions/README.md)
+  * [Egenskaper](minecraft-plugins/bedwars-restrictions/features.md)
+  * [Installasjonsveiledning](minecraft-plugins/bedwars-restrictions/installation-guide.md)
+  * [Konfigurasjon (config.yml)](minecraft-plugins/bedwars-restrictions/configuration-config.yml.md)
+  * [Kommandoer og tillatelser](minecraft-plugins/bedwars-restrictions/commands-and-permissions.md)
+  * [Feilsøking og ofte stilte spørsmål](minecraft-plugins/bedwars-restrictions/troubleshooting-and-faq.md)
 
-## Discord bots
+## Discord-bots
 
-- [AeroDesk](discord-bots/aerodesk/README.md)
-  - [Key Features](discord-bots/aerodesk/key-features.md)
-  - [Installation & Deployment Guide](discord-bots/aerodesk/installation-and-deployment-guide.md)
-  - [Configuration Guide](discord-bots/aerodesk/configuration-guide.md)
-  - [Commands](discord-bots/aerodesk/commands.md)
-  - [Frequently Asked Questions (FAQ)](discord-bots/aerodesk/frequently-asked-questions-faq.md)
+* [AeroDesk](discord-bots/aerodesk/README.md)
+  * [Hovedegenskaper](discord-bots/aerodesk/key-features.md)
+  * [Veiledning for installasjon og distribusjon](discord-bots/aerodesk/installation-and-deployment-guide.md)
+  * [Konfigurasjonsguiden](discord-bots/aerodesk/configuration-guide.md)
+  * [Kommandoer](discord-bots/aerodesk/commands.md)
+  * [Ofte stilte spørsmål (FAQ)](discord-bots/aerodesk/frequently-asked-questions-faq.md)
 
-## Network & Firewall Guides
+## Veiledninger for nettverk og brannmur
 
-- [Allowing Port 443](network-and-firewall-guides/allowing-port-443.md)
-- [Minecraft Server Guides](network-and-firewall-guides/minecraft-server-guides/README.md)
-  - [Java SSL/TLS & Certificate Trust Store Guide](network-and-firewall-guides/minecraft-server-guides/java-ssl-tls-and-certificate-trust-store-guide.md)
-  - [DNS & Hostname Resolution Guide](network-and-firewall-guides/minecraft-server-guides/dns-and-hostname-resolution-guide.md)
-  - [Proxy Network & IP Forwarding (Velocity / BungeeCord)](network-and-firewall-guides/minecraft-server-guides/proxy-network-and-ip-forwarding-velocity-bungeecord.md)
-  - [Local Environment Port Forwarding & Tunnels](network-and-firewall-guides/minecraft-server-guides/local-environment-port-forwarding-and-tunnels.md)
-- [Discord Bot Guides](network-and-firewall-guides/discord-bot-guides/README.md)
-  - [The Core Connection (Outbound Traffic)](network-and-firewall-guides/discord-bot-guides/the-core-connection-outbound-traffic.md)
-  - [Database & API Whitelisting](network-and-firewall-guides/discord-bot-guides/database-and-api-whitelisting.md)
-  - [Dashboards & Incoming Webhooks (Inbound Traffic)](network-and-firewall-guides/discord-bot-guides/dashboards-and-incoming-webhooks-inbound-traffic.md)
+* [Tillate port 443](veiledninger-for-nettverk-og-brannmur/allowing-port-443.md)
+* [Veiledninger for Minecraft-servere](veiledninger-for-nettverk-og-brannmur/minecraft-server-guides/README.md)
+  * [Veiledning for Java SSL/TLS og sertifikat-tillitslager (Trust Store)](veiledninger-for-nettverk-og-brannmur/minecraft-server-guides/java-ssl-tls-and-certificate-trust-store-guide.md)
+  * [Veiledning for DNS og vertsnavnoppslag](veiledninger-for-nettverk-og-brannmur/minecraft-server-guides/dns-and-hostname-resolution-guide.md)
+  * [Proxy-nettverk og IP-videresending (Velocity / BungeeCord)](veiledninger-for-nettverk-og-brannmur/minecraft-server-guides/proxy-network-and-ip-forwarding-velocity-bungeecord.md)
+  * [Lokal portvideresending og tunneler](veiledninger-for-nettverk-og-brannmur/minecraft-server-guides/local-environment-port-forwarding-and-tunnels.md)
+* [Veiledninger for Discord-boter](veiledninger-for-nettverk-og-brannmur/discord-bot-guides/README.md)
+  * [Kjerneforbindelsen (utgående trafikk)](veiledninger-for-nettverk-og-brannmur/discord-bot-guides/the-core-connection-outbound-traffic.md)
+  * [Hvitelisting for database og API](veiledninger-for-nettverk-og-brannmur/discord-bot-guides/database-and-api-whitelisting.md)
+  * [Dashbord og innkommende webhooks (innkommende trafikk)](veiledninger-for-nettverk-og-brannmur/discord-bot-guides/dashboards-and-incoming-webhooks-inbound-traffic.md)

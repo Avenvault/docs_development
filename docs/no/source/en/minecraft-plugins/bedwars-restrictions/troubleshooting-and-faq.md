@@ -1,27 +1,30 @@
 ---
 icon: question
+tags:
+  - faq
 ---
 
-# Troubleshooting & FAQ
+# Feilsøking og ofte stilte spørsmål
 
-Q: My console says "FATAL: Invalid License Key" and the plugin disables itself.&#x20;
+Spm: Konsollen min sier "FATAL: Invalid License Key" og pluginet deaktiverer seg selv.
 
-A: This means the RSA-256 cloud authentication rejected your key.
+Svar: Dette betyr at RSA-256 skyautentiseringen avviste nøkkelen din.
 
-1. Check your `config.yml` to ensure there are no trailing spaces around your key.
-2. Verify that your subscription/license has not expired on the premium portal.
-3. Ensure you are using the exact format provided (e.g., 1234-5678-9012).
+1. Sjekk `config.yml` for å sikre at det ikke er noen ekstra mellomrom på slutten av nøkkelen din.
+2. Bekreft at abonnementet/lisensen din ikke har utløpt i premiumportalen.
+3. Sørg for at du bruker nøyaktig det formatet som er oppgitt (f.eks. 1234-5678-9012).
+4. Sørg for at du bruker nøyaktig det formatet som er oppgitt (f.eks. 1234-5678-9012).
 
-Q: The console says "License Server Unreachable" during startup.&#x20;
+Spm: Konsollen sier "License Server Unreachable" under oppstart.
 
-A: The plugin requires an active internet connection to verify its integrity. Ensure that your host/machine allows outbound connections on Port 443 (HTTPS) and that your firewall is not blocking traffic to our auth servers.
+Svar: Pluginet krever en aktiv internettilkobling for å bekrefte integriteten sin. Sørg for at verten/maskinen din tillater utgående tilkoblinger på port 443 (HTTPS), og at brannmuren din ikke blokkerer trafikk til autentiseringsserverne våre.
 
-Q: Players are still able to build outside the arena boundaries!&#x20;
+Spm: Spillere kan fortsatt bygge utenfor arenagrensene!
 
-A: First, verify that the player in question is not an Administrator (OP) or does not have the `bwr.bypass` permission node. Second, double-check your `min` and `max` coordinates in `config.yml` to ensure the mathematical bounding box is drawn correctly (min values should always be lower than max values).
+Svar: Først, bekreft at den aktuelle spilleren ikke er en administrator (OP) og ikke har tillatelsesnoden `bwr.bypass`. For det andre, dobbeltsjekk min- og max-koordinatene dine i `config.yml` for å sikre at den matematiske avgrensningsboksen (bounding box) er satt opp riktig (min-verdier skal alltid være lavere enn max-verdier).
 
-Q: Is this plugin compatible with ViaVersion/Geyser?&#x20;
+Spm: Er dette pluginet kompatibelt med ViaVersion/Geyser?
 
-A: Yes! Because BedwarsRestrictions handles bounding boxes at the server level, it is 100% compatible with bedrock players via Geyser and clients using different versions via ViaVersion.
+Svar: Ja! Fordi BedwarsRestrictions håndterer avgrensningsbokser på servernivå, er det 100 % kompatibelt med Bedrock-spillere via Geyser og klienter som bruker andre versjoner via ViaVersion.
 
-_**Need further assistance?**_ [_**Contact us**_](https://plugins.avenvault.com/contact) _**with your license key (to verify) or join our discord and verify your license to get support!**_
+**Trenger du ytterligere hjelp?** [**Kontakt oss**](https://plugins.avenvault.com/contact) **med lisensnøkkelen din (for verifisering) eller bli med på vår Discord og verifiser lisensen din for å få støtte!**

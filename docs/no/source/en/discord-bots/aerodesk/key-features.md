@@ -1,14 +1,16 @@
 ---
 icon: circle-star
+tags:
+  - info
 ---
 
-# Key Features
+# Hovedegenskaper
 
-- Interactive Ticket Panels: Deploy sleek dropdown menus (`/ticketpanel`) allowing users to intuitively select their specific support category.
-- Dynamic Routing & Categories: Route specific issues (e.g., Billing, General) to dedicated staff roles with customized welcome messages for each category.
-- Advanced Claiming & Channel Lockdown: When a staff member claims a ticket, the bot automatically revokes read/write permissions from the general staff team, locking the channel exclusively to the claimer and authorized Admins.
-- Smart Cooldowns & Tiered Limits: Prevent ticket spam with global cooldowns, and reward VIPs or Server Boosters with higher ticket limits using role-based tiers.
-- Automated FAQ Detection: The bot actively monitors tickets for predefined keywords and instantly replies with automated solutions, logging trigger metrics in the background.
-- Comprehensive Analytics: Track global metrics including total tickets opened, closed, and FAQs answered. View real-time data using the `/stats` command.
-- HTML Transcripts & Cloud Storage: Upon closure (with optional modal-based closing reasons), the bot generates a beautiful HTML transcript, uploads it to a hidden log channel for Discord CDN hosting, and archives the URL in your database.
-- Post-Ticket Reviews: Automatically sends a 1-5 star interactive dropdown menu to users via Direct Message to rate their support experience.
+* Interaktive ticket-paneler: Rull ut stilrene nedtrekksmenyer (`/ticketpanel`) som lar brukere intuitivt velge sin spesifikke supportkategori.
+* Dynamisk ruting og kategorier: Videresend spesifikke problemer (f.eks. Fakturering, Generelt) til dedikerte stabsroller med tilpassede velkomstmeldinger for hver kategori.
+* Avansert tildeling (Claiming) og kanallåsing: Når et stabmedlem gjør krav på en ticket, fjerner boten automatisk lese- og skrivetilgang for resten av teamet, og låser kanalen eksklusivt for personen som tok saken og autoriserte administratorer.
+* Smarte nedkjølingsperioder (Cooldowns) og nivåbaserte grenser: Forhindre ticket-spam med globale nedkjølingsperioder, og belønn VIP-er eller Server Boosters med høyere ticket-grenser ved hjelp av rollebaserte nivåer.
+* Automatisk FAQ-deteksjon: Boten overvåker aktivt tickets for forhåndsdefinerte nøkkelord og svarer umiddelbart med automatiserte løsninger, samtidig som den logger utløsermetrikker i bakgrunnen.
+* Omfattende analyse: Spor globale metrikker inkludert totalt antall åpnede tickets, lukkede tickets og besvarte FAQ-er. Se sanntidsdata ved hjelp av `/stats`-kommandoen.
+* HTML-transkripsjoner og skylagring: Ved stenging (med valgfrie popup-vinduer for begrunnelse av lukking), genererer boten en oversiktlig HTML-transkripsjon, laster den opp til en skjult loggkanal for Discord CDN-hosting, og arkiverer nettadressen i databasen din.
+* Vurderinger etter avsluttet sak: Sender automatisk en interaktiv nedtrekksmeny med 1-5 stjerner til brukere via direktemelding (DM) slik at de kan vurdere supportopplevelsen sin.

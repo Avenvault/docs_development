@@ -1,54 +1,61 @@
 ---
 icon: desktop-arrow-down
+tags:
+  - guides
 ---
 
-# Installation & Deployment Guide
+# Veiledning for installasjon og distribusjon
 
-Getting the Enterprise Ticket System up and running on your host machine (VPS, Dedicated Server, or Pterodactyl Panel) is a straightforward process. Follow these steps carefully to ensure a smooth deployment.
+Å få Enterprise Ticket System opp og gå på vertsmaskinen din (VPS, dedikert server eller Pterodactyl Panel) er en grei prosess. Følg disse trinnene nøye for å sikre en problemfri utrulling.
 
-#### 📋 Prerequisites
+📋 Forutsetninger
 
-Before you begin, ensure your hosting environment has the following installed:
+Før du begynner, må du sørge for at vertsmiljøet ditt har følgende installert:
 
-- Java 17 or higher (Required for modern JDA versions).
-- A database solution (MongoDB cluster, SQL database, or local storage access for JSON).
-- A Discord Bot Token (obtained from the [Discord Developer Portal](https://www.google.com/search?q=https://discord.com/developers/applications)).
+* Java 17 eller nyere (kreves for moderne JDA-versjoner).
+* En databaseløsning (MongoDB-klynge, SQL-database, eller tilgang til lokal lagring for JSON).
+* En Discord Bot Token (hentes fra Discord Developer Portal).
 
-#### Step 1: Discord Application Setup
+Trinn 1: Oppsett av Discord-applikasjon
 
-1. Go to the Discord Developer Portal and create a New Application.
-2. Navigate to the Bot tab and click Add Bot.
-3. Critical: Select Bot and scroll down to Privileged Gateway Intents and enable:
-   - `Server Members Intent` (Needed for checking roles).
-   - `Message Content Intent` (Needed for FAQ keyword detection).
-4. Save your changes and copy your Bot Token. Keep this secret!
-5. Invite the bot to your server by going to OAuth2 and scroll down to the OAuth2 URL Generator. Make sure you check both `bot` and `applications.commands` (required for Slash Commands), check `Administrator` under General Permissions and paste in the browser the URL that is provided under Generated URL.
+* Gå til Discord Developer Portal og opprett en ny applikasjon (New Application).
+* Naviger til Bot-fanen og klikk på Add Bot.
+* Kritisk: Rull ned til Privileged Gateway Intents og aktiver:
+  * Server Members Intent (Nødvendig for å sjekke roller).
+  * Message Content Intent (Nødvendig for å oppdage nøkkelord for FAQ).
+* Lagre endringene dine og kopier Bot Tokenen din. Hold denne hemmelig!
+* Inviter boten til serveren din ved å gå til OAuth2 og rulle ned til OAuth2 URL Generator. Sørg for at du krysser av for både `bot` og `applications.commands` (kreves for Slash-kommandoer), kryss av for Administrator under _General Permissions_, og lim inn nettadressen som oppgis under _Generated URL_ i nettleseren din.
 
-#### Step 2: Server Preparation
+Trinn 2: Serverforberedelser
 
-1. Create a new folder on your host machine for the bot (e.g., `TicketBot`).
-2. Download the latest release and place it inside the folder.
-3. Run the bot for the first time to generate the configuration files:
+* Opprett en ny mappe på vertsmaskinen din for boten (f.eks. TicketBot).
+* Last ned den nyeste utgivelsen (release) og legg den i mappen.
+* Kjør boten for første gang for å generere konfigurasjonsfilene:
 
-   <pre><code>java -jar <a data-footnote-ref href="#user-content-fn-1">[NAME]</a>.jar
-   </code></pre>
-4. The bot will automatically shut down and inform you that a `config.yml` has been generated.
+Bash
 
-#### Step 3: Configuration
-
-1. Open the newly generated `config.yml`.
-2. Paste your Bot Token and your personal Discord Owner ID.
-3. Configure your Database URI (if using MongoDB or SQL).
-4. Fill out your server-specific settings, including Role IDs, Channel IDs, and your Category configurations (refer to the [Configuration Guide](https://www.google.com/search?q=%23) for details).
-5. Save the file.
-
-#### Step 4: Final Boot
-
-Start the bot again using your preferred startup script, `screen`, or Pterodactyl panel:
-
-<pre><code>java -Xms1G -Xmx2G -jar <a data-footnote-ref href="#user-content-fn-1">[NAME]</a>.jar
+<pre><code>java -jar [<a data-footnote-ref href="#user-content-fn-1">NAME</a>].jar
 </code></pre>
 
-_If configured correctly, the console will log a successful database connection and confirm that your Slash Commands have been registered globally._
+* Boten vil automatisk slå seg av og informere deg om at filen `config.yml` har blitt generert.
 
-[^1]: Change this to the name of the jar
+Trinn 3: Konfigurasjon
+
+* Åpne den nylig genererte `config.yml`.
+* Lim inn din Bot Token og din personlige Discord Owner ID.
+* Konfigurer Database URI (hvis du bruker MongoDB eller SQL).
+* Fyll ut dine server-spesifikke innstillinger, inkludert Role IDs, Channel IDs og dine kategori-konfigurasjoner (se [konfigurasjonsguiden](configuration-guide.md) for detaljer).
+* Lagre filen.
+
+Trinn 4: Siste oppstart
+
+Start boten på nytt ved hjelp av ditt foretrukne oppstartsskript, screen eller Pterodactyl-panel:
+
+Bash
+
+<pre><code>java -Xms1G -Xmx2G -jar [<a data-footnote-ref href="#user-content-fn-1">NAME</a>].jar
+</code></pre>
+
+Hvis konfigurasjonen er riktig, vil konsollen logge en vellykket databasetilkobling og bekrefte at Slash-kommandoene dine har blitt registrert globalt.
+
+[^1]: Endre dette til navnet på jar-filen.

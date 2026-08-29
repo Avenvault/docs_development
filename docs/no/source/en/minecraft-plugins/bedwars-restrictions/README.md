@@ -1,18 +1,19 @@
 ---
 icon: do-not-enter
+tags:
+  - minecraft
 ---
 
 # Bedwars Restrictions
 
 ## Bedwars Restrictions
 
-Welcome to the official documentation for Bedwars Restrictions. Designed for Spigot and Paper servers, this premium plugin provides lightweight, high-performance boundary enforcement for Bedwars arenas. Prevent map exploits, block glitching, and out-of-bounds building with zero impact on server performance.
+Velkommen til den offisielle dokumentasjonen for Bedwars Restrictions. Denne premium-pluginen er utviklet for Spigot- og Paper-servere og sørger for effektiv håndheving av grenser på Bedwars-arenaer. Forhindre utnyttelse av kartet, blokker «glitching» og stopp bygging utenfor tillatte områder – helt uten å påvirke serverytelsen.
 
-### Table of Contents
+### Innholdsfortegnelse
 
-1. [Overview & Features](features.md)
-2. [Installation Guide](installation-guide.md)
-3. [Configuration (config.yml)](configuration-config.yml.md)
-4. [Commands & Permissions](commands-and-permissions.md)
-5. [Troubleshooting & FAQ](troubleshooting-and-faq.md)
-
+1. [Oversikt og funksjoner](features.md)
+2. [Installasjonsveiledning](installation-guide.md)
+3. [Konfigurasjon (config.yml)](configuration-config.yml.md)
+4. [Kommandoer og tilganger](commands-and-permissions.md)
+5. [Feilsøking og ofte stilte spørsmål (FAQ)](troubleshooting-and-faq.md)

@@ -1,14 +1,16 @@
 ---
 icon: circle-star
+tags:
+  - info
 ---
 
-# Features
+# Egenskaper
 
-#### Key Features
+#### Hovedegenskaper
 
-- Strict Zone Protection: Define 3D bounding boxes for your arenas. Prevents players from placing blocks or breaking map geometry.
-- High Performance (Zero Lag): Built entirely with asynchronous execution and ultra-lightweight block-placement checks to guarantee zero TPS drops during 4v4v4v4 gameplay.
-- Multi-Version Support: Natively supports modern Spigot/Paper server architectures ([1.8.8 – 1.21.X](#user-content-fn-1)[^1]).
-- Global Metrics: Fully integrated with bStats to track global usage anonymously.
+* Streng sonebeskyttelse: Definer 3D-avgrensningsbokser for arenaene dine. Hindrer spillere i å plassere blokker eller ødelegge kartgeometrien.
+* Høy ytelse (ingen forsinkelse): Bygget utelukkende med asynkron utførelse og svært lette kontroller for blokkplassering, for å garantere at TPS-en ikke faller under 4v4v4v4-spill.
+* Støtte for flere versjoner: Har innebygd støtte for moderne Spigot/Paper-serverarkitekturer ([1.8.8 – 1.21.X](#user-content-fn-1)[^1]).
+* Global statistikk: Fullt integrert med bStats for anonym sporing av global bruk.
 
-[^1]: Every version from 1.8.8 to 1.21.11
+[^1]: Hver versjon fra 1.8.8 til 1.21.11

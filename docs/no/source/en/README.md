@@ -1,4 +1,9 @@
-# Docs
+---
+tags:
+  - info
+---
+
+# Dokumenter
 
 ## 📖 Official Server & Bot Documentation
 
@@ -12,13 +17,13 @@ Du kan endre språket øverst til høyre!
 
 ### 🎮 Minecraft Plugins
 
-[her](minecraft-plugins\(table\).md)
+[her](discord-bots-table.md)
 
 ***
 
 ### 🤖 Discord-boter
 
-[her](discord-bots\(table\).md)
+[her](discord-bots-table.md)
 
 ***
 
@@ -28,11 +33,11 @@ Self-service guides to assist server administrators with connection, SSL, firewa
 
 #### 🔌 Guider for Minecraft-servere
 
-[her](network-and-firewall-guides/minecraft-server-guides/)
+[her](veiledninger-for-nettverk-og-brannmur/minecraft-server-guides/)
 
 #### 🤖 Generelle veiledninger for Discord-boter
 
-[her](network-and-firewall-guides/discord-bot-guides/)
+[her](veiledninger-for-nettverk-og-brannmur/discord-bot-guides/)
 
 ***
 

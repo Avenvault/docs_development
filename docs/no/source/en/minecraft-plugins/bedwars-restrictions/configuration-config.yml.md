@@ -1,40 +1,42 @@
 ---
 icon: gear
+tags:
+  - guides
 ---
 
-# Configuration (config.yml)
+# Konfigurasjon (config.yml)
 
-The `config.yml` is where you define your arenas, customize player messages, and input your license key.
+I `config.yml` definerer du arenaene dine, tilpasser spillermeldinger og legger inn lisensnøkkelen din.
 
-#### Example Configuration
+### **Eksempelkonfigurasjon**
 
 ```
 # ========================================== #
-#      BedwarsRestrictions Configuration     #
+#      BedwarsRestrictions Konfigurasjon     #
 # ========================================== #
 
 # ------------------------------------------ #
-# License Authentication
+# Lisensautentisering
 # ------------------------------------------ #
 license-key: ENTER-YOUR-KEY-HERE
 
 # ------------------------------------------ #
-# Optimization & System
+# Optimalisering & System
 # ------------------------------------------ #
-# Set this to false to disable bStats metrics specifically for this plugin.
-# Note: Server owners can also disable bStats globally in /plugins/bStats/config.yml
+# Sett denne til false for å deaktivere bStats-målinger spesifikt for dette pluginet.
+# Merk: Servereiere kan også deaktivere bStats globalt i /plugins/bStats/config.yml
 metrics: true
 
-# Toggle to true to see block coordinates and arena validation steps in chat (OPs only)
+# Bytt til true for å se blokkoordinater og arena-valideringstrinn i chatten (kun for OP)
 debug: false
 
 # ------------------------------------------ #
-# Arena Boundaries (Zones)
+# Arenagrenser (Soner)
 # ------------------------------------------ #
-# Define your protected areas here. Players will not be able to place/break blocks
-# blocks OUTSIDE the area defined by min-cord and max-cord.
-# The plugin will automatically set the world and set min, max when you use /bwr set [NAME]
-# after selecting POS1 and POS2
+# Definer de beskyttede områdene dine her. Spillere vil ikke kunne plassere/ødelegge blokker
+# UTENFOR området definert av min-cord og max-cord.
+# Pluginet vil automatisk sette verdenen og sette min, max når du bruker /bwr set [NAME]
+# etter å ha valgt POS1 og POS2
 zones:
   hypixel_map:
     green_base:
@@ -52,9 +54,8 @@ zones:
       max: [150, 134, 101]
 ```
 
-#### Configuration Breakdown
+Gjennomgang av konfigurasjon
 
-- `license-key`: The cryptographic key linking your server to your purchase. The plugin queries the authentication web server using this key.
-- `zones`: This is a list of your protected zones. A zone requires a `world` name and coordinates (minimum and maximum). These coordinates create an invisible 3D box. Players cannot place or blocks _inside_ this box.&#x20;
-
-  > ⚠️ Notice: BedwarsRestrictions will automatically do this but if you want to do it yourself you are more than welcome to.
+* `license-key`: Den kryptografiske nøkkelen som knytter serveren din til kjøpet ditt. Pluginet gjør en forespørsel til autentiseringsserveren på nettet ved hjelp av denne nøkkelen.
+* `zones`: Dette er en liste over de beskyttede sonene dine. En sone krever et verdensnavn og koordinater (minimum og maksimum). Disse koordinatene skaper en usynlig 3D-boks. Spillere kan ikke plassere eller ødelegge blokker inne i denne boksen.
+* > ⚠️ Merk: BedwarsRestrictions vil gjøre dette automatisk, men hvis du ønsker å gjøre det selv, er du hjertelig velkommen til det.

@@ -1,9 +1,14 @@
-# Minecraft plugins table
+---
+tags:
+  - minecraft
+  - info
+---
 
-### 🎮 Minecraft Plugins
+# Tabell over Minecraft-tillegg
 
-High-performance, lightweight Spigot/Paper plugins built for competitive networks.
+### 🎮 Minecraft-Plugins
 
-- [**BedwarsRestrictions**](minecraft-plugins/bedwars-restrictions/)
-- **More soon!**
+Høyytelses og lette Spigot-/Paper-tillegg, utviklet for konkurransepregede nettverk.
 
+* [**BedwarsRestrictions**](minecraft-plugins/bedwars-restrictions/)
+* **Mer kommer snart!**

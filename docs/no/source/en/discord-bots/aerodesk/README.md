@@ -1,18 +1,19 @@
 ---
 icon: ticket
+tags:
+  - discord
 ---
 
 # AeroDesk
 
-The High-Performance, Scalable Support Bot for Discord Communities
+Den høyytende og skalerbare support-boten for Discord-fellesskap
 
-Welcome to the official documentation for the Ticket System. Built in Java using the powerful JDA (Java Discord API) library, this bot provides a seamless, highly optimized, and feature-rich support experience for your server. Backed by a flexible Key-Value NoSQL architecture (supporting JSON, MongoDB, and SQL via Jackson), it is designed to scale with your community from day one.
+Velkommen til den offisielle dokumentasjonen for Ticket-systemet. Denne boten er utviklet i Java ved hjelp av det kraftige biblioteket JDA (Java Discord API), og tilbyr en sømløs, svært optimalisert og funksjonsrik støtteopplevelse for serveren din. Den er bygget på en fleksibel Key-Value NoSQL-arkitektur (med støtte for JSON, MongoDB og SQL via Jackson) og er designet for å skalere i takt med nettsamfunnet ditt helt fra starten av.
 
 **Table of Contents:**
 
-- [Overview & Key Features](key-features.md)
-- [Installation & Deployment](installation-and-deployment-guide.md)
-- [Configuration (config.yml)](configuration-guide.md)
-- [Slash Commands Reference](commands.md)
-- [Frequently Asked Questions](frequently-asked-questions-faq.md)
-
+* [Oversikt og hovedfunksjoner](key-features.md)
+* [Installasjon og utrulling](installation-and-deployment-guide.md)
+* [Konfigurasjon (config.yml)](configuration-guide.md)
+* [Referanse for skråstrekkommandoer](commands.md)
+* [Ofte stilte spørsmål](frequently-asked-questions-faq.md)

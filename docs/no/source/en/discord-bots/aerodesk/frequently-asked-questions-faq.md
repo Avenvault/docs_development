@@ -1,44 +1,36 @@
 ---
 icon: question
+tags:
+  - faq
 ---
 
-# Frequently Asked Questions (FAQ)
+# Ofte stilte spørsmål (FAQ)
 
-Here are the most common issues server administrators run into and how to solve them.
+Her er de vanligste problemene serveradministratorer støter på, og hvordan de kan løses.
 
-#### Setup & Configuration
+Oppsett og konfigurasjon
 
-Q: How do I find Role IDs and Channel IDs for the config?&#x20;
+Spørsmål: Hvordan finner jeg rolle-ID-er og kanal-ID-er for konfigurasjonen? Svar: Du må aktivere Utviklermodus (Developer Mode) i Discord.
 
-A: You need to enable Developer Mode in Discord.
+* Gå til Discord-innstillinger > Avansert (Advanced) > Slå på Utviklermodus (Developer Mode).
+* Høyreklikk på en hvilken som helst rolle, kanal eller bruker, og klikk på «Kopier kanal-ID» (Copy Channel ID) eller «Kopier rolle-ID» (Copy Role ID) nederst på menyen.
 
-1. Go to Discord Settings > Advanced > Toggle Developer Mode on.
-2. Right-click any role, channel, or user, and click Copy Channel ID or Copy Role ID at the bottom of the menu.
+Spørsmål: Jeg inviterte boten, men jeg ser ikke `/ticketpanel` eller `/stats`? Svar: Slash-kommandoer krever spesifikke omfang (scopes) for å registrere seg.
 
-Q: I invited the bot, but I don't see `/ticketpanel` or `/stats`?&#x20;
+* Sørg for at du inviterte boten med `applications.commands`-omfanget krysset av i OAuth2 URL Generator.
+* Spark ut boten og inviter den på nytt med riktig URL. _Merk:_ Du kan prøve å trykke på F5, men globale slash-kommandoer kan noen ganger ta opptil en time å synkronisere på tvers av alle Discord-servere naturlig, selv om de vanligvis dukker opp umiddelbart.
 
-A: Slash commands require specific scopes to register.
+🛠️ Funksjonalitet og feil
 
-1. Ensure you invited the bot with the `applications.commands` scope checked in the OAuth2 URL generator.
-2. Kick the bot and re-invite it with the correct URL. Note: You can try pressing F5 but global slash commands can sometimes take up to an hour to sync across all Discord servers natively, though they usually appear instantly.
+Spørsmål: Boten kaster en `MongoTimeoutException` i konsollen og krasjer. Svar: Dette betyr at boten ikke når MongoDB-databasen din.
 
-#### 🛠️ Functionality & Errors
+* Sjekk `config.yml` for å sikre at `database.uri` er formatert riktig.
+* Hvis du bruker MongoDB Atlas (skybasert), må du sørge for at du har hvitelistet serverens IP-adresse (eller satt den til `0.0.0.0/0` for å tillate alle IP-er) under _Network Access_-fanen.
 
-Q: The bot throws a `MongoTimeoutException` in the console and crashes.&#x20;
+Spørsmål: Når et stabmedlem tar en sak (claim), låses ikke kanalen! Svar: Dette skyldes nesten alltid et problem med Discord-rollehierarki eller tillatelser.
 
-A: This means the bot cannot reach your MongoDB database.
+* Sørg for at `enableClaimRemoval: true` er satt i konfigurasjonen for den spesifikke kategorien.
+* Sørg for at botens høyeste rolle er plassert over stabsrollene i serverinnstillingene dine på Discord. Boten kan ikke fjerne tillatelser fra roller som er høyere enn dens egen.
+* Sørg for at boten har tillatelsene _Manage Channels_ (Administrer kanaler) og _Manage Roles_ (Administrer roller), selv om _Administrator_-tillatelse anbefales.
 
-- Check your `config.yml` to ensure the `database.uri` is formatted correctly.
-- If you are using MongoDB Atlas (Cloud), ensure you have whitelisted your server's IP address (or set it to `0.0.0.0/0` to allow all IPs) in the Network Access tab.
-
-Q: When a staff member claims a ticket, the channel doesn't lock down!&#x20;
-
-A: This is almost always a Discord role hierarchy or permission issue.
-
-1. Ensure `enableClaimRemoval: true` is set in your configuration for that category.
-2. Ensure the Bot's highest role is placed above the staff roles in your Discord Server Settings. The bot cannot remove permissions from roles that are higher than itself.
-3. Ensure the bot has the `Manage Channels` and `Manage Roles` permissions but `Administrator` permission is recommended.
-
-Q: Why aren't the HTML transcripts generating a link?
-
-A: The bot uploads the generated HTML file directly to Discord's CDN via the `logsChannelId` specified in your config. If the bot does not have permission to `Attach Files` or `Send Messages` in that specific hidden log channel, the upload will fail, and no link can be generated. Check the channel permissions!
+Spørsmål: Hvorfor genererer ikke HTML-transkripsjonene en lenke? Svar: Boten laster opp den genererte HTML-filen direkte til Discords CDN via `logsChannelId` som er spesifisert i konfigurasjonen din. Hvis boten ikke har tillatelse til å legge ved filer (_Attach Files_) eller sende meldinger (_Send Messages_) i den spesifikke skjulte loggkanalen, vil opplastingen mislykkes, og ingen lenke kan genereres. Sjekk kanaltillatelsene!

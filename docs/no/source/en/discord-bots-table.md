@@ -1,7 +1,12 @@
-# Discord bots table
+---
+tags:
+  - discord
+  - info
+---
 
-Scalable, high-performance JDA-based Discord bots designed for community management and support.
+# Tabell over Discord-boter
 
-- [**AeroDesk**](discord-bots/aerodesk/)
-- **More soon!**
+Skalerbare, høyytelses JDA-baserte Discord-boter utviklet for nettsamfunnsadministrasjon og brukerstøtte.
 
+* [**AeroDesk**](discord-bots/aerodesk/)
+* **Mer kommer snart!**
