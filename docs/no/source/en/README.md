@@ -42,5 +42,5 @@ If you require further technical assistance beyond these guides, please reach ou
 
 - Email Support: [Contact Us](https://plugins.avenvault.com/contact)
 - **Support Discord:** Soon!
-- **Ticket Portal:** Open a ticket in `#support-tickets` after you have verified your license with /verify-license.
+- **Billettportal:** Opprett en sak i `#support-tickets` etter at du har verifisert lisensen din med `/verify-license`.
 
