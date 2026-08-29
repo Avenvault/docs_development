@@ -1,6 +1,20 @@
 # Table of contents
 
 - [Docs](README.md)
+
+## addons-api
+
+- [AeroDesk 开发者 API 指南](addons-api/aerodesk-developer-api-guide/README.md)
+  - [正在开始](addons-api/aerodesk-developer-api-guide/getting-started.md)
+  - [Base API](addons-api/aerodesk-developer-api-guide/base-api.md)
+  - [Keyword FAQs & Escalation Levels](addons-api/aerodesk-developer-api-guide/keyword-faqs-and-escalation-levels.md)
+  - [数据库和配置同步方法](addons-api/aerodesk-developer-api-guide/database-and-config-sync-methods.md)
+  - [类别和支持层](addons-api/aerodesk-developer-api-guide/categories-and-support-tiers.md)
+  - [第4页](addons-api/aerodesk-developer-api-guide/page-4.md)
+- [第2页](addons-api/page-2.md)
+
+***
+
 - [Discord bots table](discord-bots-table.md)
 - [Minecraft plugins table](minecraft-plugins-table.md)
 
