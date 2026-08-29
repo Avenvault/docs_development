@@ -12,13 +12,13 @@ Du kan endre språket øverst til høyre!
 
 ### 🎮 Minecraft Plugins
 
-[her](minecraft-plugins%28table%29.md)
+[her](minecraft-plugins\(table\).md)
 
 ***
 
 ### 🤖 Discord-boter
 
-[her](discord-bots%28table%29.md)
+[her](discord-bots\(table\).md)
 
 ***
 
@@ -36,11 +36,10 @@ Self-service guides to assist server administrators with connection, SSL, firewa
 
 ***
 
-### 💬 Support & Contact
+### 💬 Kundestøtte og kontakt
 
-If you require further technical assistance beyond these guides, please reach out via our support channels:
+Hvis du trenger ytterligere teknisk hjelp utover disse veiledningene, kan du kontakte oss via våre kundestøttekanaler:
 
-- Email Support: [Contact Us](https://plugins.avenvault.com/contact)
-- **Support Discord:** Soon!
-- **Ticket Portal:** Open a ticket in `#support-tickets` after you have verified your license with /verify-license.
-
+* **E-poststøtte**: [Kontakt oss](https://plugins.avenvault.com/contact)
+* **Support-Discord**: Kommer snart!
+* **Billettportal**: Opprett en sak i `#support-tickets` etter at du har verifisert lisensen din med /verify-license.
