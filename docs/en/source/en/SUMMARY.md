@@ -1,6 +1,20 @@
 # Table of contents
 
 - [Docs](README.md)
+
+## addons-api
+
+- [AeroDesk Developer API Guide](addons-api/aerodesk-developer-api-guide/README.md)
+  - [Getting Started](addons-api/aerodesk-developer-api-guide/getting-started.md)
+  - [Base API](addons-api/aerodesk-developer-api-guide/base-api.md)
+  - [Keyword FAQs & Escalation Levels](addons-api/aerodesk-developer-api-guide/keyword-faqs-and-escalation-levels.md)
+  - [Database & Config Sync Methods](addons-api/aerodesk-developer-api-guide/database-and-config-sync-methods.md)
+  - [Categories & Support Tiers](addons-api/aerodesk-developer-api-guide/categories-and-support-tiers.md)
+  - [Page 4](addons-api/aerodesk-developer-api-guide/page-4.md)
+- [Page 2](addons-api/page-2.md)
+
+***
+
 - [Discord bots table](discord-bots-table.md)
 - [Minecraft plugins table](minecraft-plugins-table.md)
 
